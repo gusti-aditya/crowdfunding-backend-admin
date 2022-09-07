@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use Exception;
 use CodeIgniter\RESTful\ResourceController;
-use App\Models\Portofolio;
+use App\Models\PortofolioModel;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
@@ -43,7 +43,7 @@ class PortofolioController extends ResourceController
 				];
 			} else {
 
-				$portofolio_obj = new Portofolio();
+				$portofolio_obj = new PortofolioModel();
 
 				$portofolio_data = $portofolio_obj->where('customer_id',$user_id)->get();
 
@@ -93,7 +93,7 @@ class PortofolioController extends ResourceController
 		try {
 
 
-			$portofolio_obj = new Portofolio();
+			$portofolio_obj = new PortofolioModel();
 
 			$portofolio_data = $portofolio_obj->getPortofolioList();
 
@@ -160,7 +160,7 @@ class PortofolioController extends ResourceController
 				];
 			} else {
 
-				$portofolio_obj = new Portofolio();
+				$portofolio_obj = new PortofolioModel();
 
 				$portofolio_data = $portofolio_obj->getById($id);
 
@@ -203,7 +203,7 @@ class PortofolioController extends ResourceController
 
 			$id = $this->request->getVar('id');
 
-			$portofolio_obj = new Portofolio();
+			$portofolio_obj = new PortofolioModel();
 
 				$portofolio_data = $portofolio_obj->getById($id);
 

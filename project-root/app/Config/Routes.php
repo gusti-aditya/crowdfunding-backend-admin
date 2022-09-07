@@ -67,9 +67,9 @@ $routes->post("confirmTransaction", "TransactionController::confirmTransaction")
 });
 
 $routes->group('portofolio', function ($routes) {
-    $routes->get("listPortofolio", "TransactionController::listPortofolio");
-    $routes->post("createPortofolio", "TransactionController::createPortofolio");
-    $routes->post("confirmPortofolio", "TransactionController::confirmPortofolio");
+    $routes->get("listPortofolio", "PortofolioController::listPortofolio");
+    $routes->post("createPortofolio", "PortofolioController::createPortofolio");
+    $routes->post("confirmPortofolio", "PortofolioController::confirmPortofolio");
     });
 
 /*

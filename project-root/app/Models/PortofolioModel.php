@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Portofolio extends Model
+class PortofolioModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'customers_business';
